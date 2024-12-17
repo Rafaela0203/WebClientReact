@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {IProduct} from "@/commons/interfaces.ts";
 import ProductService from "@/service/ProductService.ts";
 import {Link} from "react-router-dom";
 
 export function ProductListPage(){
-    const [data, setData] = React.useState<IProduct[]>([]);
-    const [apiError, setApiError] = React.useState<boolean>(false);
+    const [data, setData] = useState<IProduct[]>([]);
+    const [apiError, setApiError] = useState<boolean>(false);
     const [apiMessage, setApiMessage] = useState<String>("");
     const [apiSuccess, setApiSuccess] = useState<boolean>(false);
 
